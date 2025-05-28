@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+    <style>
+        .container {
+            height: 220px;
+            width: 450px;
+            background-color: white;
+            border-radius: 5%;
+            margin-top: 10%;
+            border: 5px solid black;
+        }
+
+        body {
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            background-color: rgb(110, 245, 255);
+            transition: background-color .5s ease;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <h1>Random Color Generator</h1><br>
+            <!-- ✅ Added id="colorButton" so JavaScript can target it -->
+            <button id="colorButton">Generate color</button><br>
+            <!-- ✅ Added a new element to show the color code -->
+            <h3 id="colorCode">Click the button to get a color!!</h3>
+        </div>
+    </center>
+
+    <script>
+        function getc() {
+            const letters = "0123456789ABCDEF";
+            let color = "#";
+            for (let i = 0; i < 6; i++) {
+                // ✅ Changed square brackets to parentheses: Math.floor()
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // ✅ Moved script after element definitions & fixed variable name typo
+        document.getElementById("colorButton").addEventListener("click", function () {
+            const newColor = getc();
+            document.body.style.backgroundColor = newColor;
+            // ✅ Fixed template literal syntax and variable name
+            document.getElementById("colorCode").textContent = `Color: ${newColor}`;
+        });
+    </script>
+</body>
+</html>

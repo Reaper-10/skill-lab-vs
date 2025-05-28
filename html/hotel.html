@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hotel Menu</title>
+  <style>
+    button {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 25px;
+      font-size: 1em;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+  </style>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body > <center><br>,<br>
+     <h1><u>Hotel Menu</u></h1>
+     <div id="div1">
+  <form id="menuForm">
+   <h2> Select Item  & Quantity</h2><br><br>
+     <h3>Idli [50/-]: <input type="number" min="0" value="0" name="idli" /><br><br>
+        Dosa [60/-]: <input type="number" min="0" value="0" name="dosa"><br><br>
+        Poori [80/-]: <input type="number" min="0" value="0" name="poori" /><br><br>
+        Coffee [20/-]: <input type="number" min="0" value="0" name="Coffee" ><br><br></h3>
+    <button type="button" onclick="calculateTotal()">Calculate Total</button>
+  </form>
+  </div>
+</center>
+  <script>
+  const prices = {
+    idli: 50,
+    dosa: 60,
+    poori: 80,
+    Coffee: 20
+  };
+
+  function calculateTotal() {
+    // Get quantities from form
+    const form = document.getElementById("menuForm");
+    const idliQty = parseInt(form.elements["idli"].value) || 0;
+    const dosaQty = parseInt(form.elements["dosa"].value) || 0;
+    const pooriQty = parseInt(form.elements["poori"].value) || 0;
+    const coffeeQty = parseInt(form.elements["Coffee"].value) || 0;
+
+    // Calculate total
+    let total = (idliQty * prices.idli) +
+                (dosaQty * prices.dosa) +
+                (pooriQty * prices.poori) +
+                (coffeeQty * prices.Coffee);
+
+    // Update the total price in the DOM
+    document.querySelector("h2:last-of-type").textContent = "Total Price: ₹" + total;
+  };
+</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>vote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center><h1 id="v"><u>Result Predictor</u></h1>
+        <p id="m"><i>All the very best!!</i></p>
+    <div id="div4">
+        <h1 id="dl"> 
+        Name: <input type="text" id="n" placeholder="Enter your name"> <br><br>
+        <button onclick="per()">Check</button>
+    </div>
+    </h1>
+    <h2 id="res">Result check.</h2>
+    </center>
+    <script >
+        function per(){
+            var u=document.getElementById("u");
+            var per=Math.random()*100;
+            var res=document.getElementById("res");
+            res.innerHTML="The result is "+per;
+        }
+    </script>
+</body>
+</html>

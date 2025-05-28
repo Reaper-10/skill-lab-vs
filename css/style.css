@@ -1,0 +1,102 @@
+body
+{
+    background-color: rgb(0, 238, 255);
+}
+/*class*/
+.c{
+    color: rgb(255, 72, 0);
+}
+/*id*/
+#Ch{
+    color:  rgb(255, 72, 0);
+}
+h2{
+    color: rgb(0, 0, 0)
+}
+/*div*/
+#div1{
+    height: 420px;
+    width: 400px;
+    padding: 15px;
+    margin: 25px;
+    background-color: rgb(255, 255, 255);
+    border: 5px solid black;  
+}
+#div2{
+    height: 200px;
+    width: 200px;
+    padding: 15px;
+    margin: 25px;
+    background-color: rgb(255, 249, 141);
+    border: 5px solid black;
+    border-radius: 50%;
+}
+#div3{
+    height: 200px;
+    width: 200px;
+    padding: 15px;
+    margin: 25px;
+    background-color: rgb(154, 255, 107);
+    border: 5px solid black;
+    border-radius: 50%;
+}
+#div1:hover{
+    background-color:rgb(158, 255, 113);
+    box-shadow: 10px 20px 15px black;
+    border: 10px double black;
+}
+#div2:hover{
+    background-color: yellow;
+    box-shadow: 10px 20px 15px black;
+    border: 10px double black;
+}
+#div3:hover{
+    background-color: rgb(0, 255, 0);
+    box-shadow: 10px 20px 15px black;
+    border: 10px double black;
+    position: relative;
+}
+.s:hover{
+    text-transform: uppercase;
+    background-color: gold;
+    text-align: center;
+    text-shadow: 1px 1px 2px black;
+}
+h1:hover{
+    text-shadow: 0px 3px 5px wheat;
+}
+body{
+    background-image: url(img/bg.jpg);
+    backdrop-filter: blur(1px);
+
+}
+#main{
+    height: 820px;
+    width: 300px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 6%;
+    background-color: black;
+}
+#v:hover{
+    background-color: black;
+    text-shadow: 5px;
+    color: aliceblue;
+}
+#div4{
+    height: 130px;
+    width: 400px;
+padding: 15px ;
+margin: 10px;
+background-color: rgb(255, 0, 0);
+border: 2px solid black;
+border-radius: 8%;
+}
+#dl.hover{
+    background-color: black;
+    text-shadow: 5px;
+    color: aliceblue;
+}
+#m{
+    color: rgb(0, 0, 0);
+}
